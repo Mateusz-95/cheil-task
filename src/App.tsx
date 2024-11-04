@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Container from "./components/Container";
+import Filters from "./components/Filters";
+import Header from "./components/Header";
+import SearchBar from "./components/SearchingBar";
+import WasherList from "./components/WasherList";
 
-function App() {
+const App: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortBy, setSortBy] = useState("wszystkie");
+  const [functionFilter, setFunctionFilter] = useState("wszystkie");
+  const [energyClass, setEnergyClass] = useState("wszystkie");
+  const [capacityFilter, setCapacityFilter] = useState("wszystkie");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+      <Filters
+        sortBy={sortBy}
+        functionFilter={functionFilter}
+        energyClass={energyClass}
+        capacityFilter={capacityFilter}
+        onSortByChange={setSortBy}
+        onFunctionFilterChange={setFunctionFilter}
+        onEnergyClassChange={setEnergyClass}
+        onCapacityFilterChange={setCapacityFilter}
+      />
+      <WasherList
+        searchTerm={searchTerm}
+        sortBy={sortBy}
+        functionFilter={functionFilter}
+        energyClass={energyClass}
+        capacityFilter={capacityFilter}
+      />
+    </Container>
   );
-}
+};
 
 export default App;

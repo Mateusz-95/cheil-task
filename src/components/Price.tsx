@@ -5,6 +5,7 @@ const PriceContainer = styled.div`
   display: flex;
   align-items: flex-end;
   font-size: 24px;
+  margin: 0 0 10px 0;
 `;
 
 const MainPrice = styled.span`
@@ -17,12 +18,19 @@ const Zero = styled.span`
   font-size: 18px;
   align-self: flex-start;
   font-weight: normal;
+  font-weight: bold;
 `;
 
 const Currency = styled.span`
   font-size: 18px;
   margin-left: 4px;
   align-self: flex-end;
+  font-weight: bold;
+`;
+
+const CurrencyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 interface PriceProps {
@@ -33,8 +41,10 @@ const Price: React.FC<PriceProps> = ({ amount }) => {
   return (
     <PriceContainer>
       <MainPrice>{amount}</MainPrice>
-      <Zero>00</Zero>
-      <Currency>zł</Currency>
+      <CurrencyContainer>
+        <Zero>00</Zero>
+        <Currency>zł</Currency>
+      </CurrencyContainer>
     </PriceContainer>
   );
 };
