@@ -3,8 +3,10 @@ import "./App.css";
 import Container from "./components/Container";
 import Filters from "./components/Filters";
 import Header from "./components/Header";
+import NumberOfResults from "./components/NumberOfResults";
 import SearchBar from "./components/SearchingBar";
 import WasherList from "./components/WasherList";
+import productsData from "./products.json";
 
 const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,6 +29,7 @@ const App: React.FC = () => {
         onEnergyClassChange={setEnergyClass}
         onCapacityFilterChange={setCapacityFilter}
       />
+      <NumberOfResults products={productsData} />
       <WasherList
         searchTerm={searchTerm}
         sortBy={sortBy}
