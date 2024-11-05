@@ -16,7 +16,7 @@
   {
     "model": "WW10T654DLH, Pralka EcoBubble™, 10,5 kg, biała",
     "capacity": "10,5",
-    "amount": 3199,
+    "amount": 3099,
     "imageUrl": "./images/WW10T654DLH.png",
     "dimensions": "55 x 60 x 85 cm",
     "functions": [
@@ -30,7 +30,7 @@
   {
     "model": "WW90T654DLH, Pralka EcoBubble™, 9 kg, biała",
     "capacity": "8",
-    "amount": 3199,
+    "amount": 3299,
     "imageUrl": "./images/WW90T654DLH.png",
     "dimensions": "55 x 60 x 85 cm",
     "functions": [
@@ -44,7 +44,7 @@
   {
     "model": "WW90T754ABT, Pralka QuickDrive™, 9 kg, biała",
     "capacity": "9",
-    "amount": 3199,
+    "amount": 3599,
     "imageUrl": "./images/WW90T754ABT.png",
     "dimensions": "55 x 60 x 85 cm",
     "functions": [
@@ -58,7 +58,7 @@
   {
     "model": "WW10T654DLH, Pralka EcoBubble™, 10,5 kg, biała",
     "capacity": "10,5",
-    "amount": 3199,
+    "amount": 2999,
     "imageUrl": "./images/WW10T654DLH.png",
     "dimensions": "55 x 60 x 85 cm",
     "functions": [

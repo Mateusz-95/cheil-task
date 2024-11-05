@@ -9,6 +9,14 @@ const FiltersContainer = styled.div`
   margin-bottom: 20px;
 `;
 
+const SmallContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const SelectTitle = styled.p`
+  font-weight: bold;
+`;
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -47,55 +55,67 @@ const Filters: React.FC<FiltersProps> = ({
   return (
     <Container>
       <FiltersContainer>
-        <Select
-          value={sortBy}
-          onChange={(e: { target: { value: string } }) =>
-            onSortByChange(e.target.value)
-          }
-        >
-          <option value="wszystkie">Popularność</option>
-          <option value="cena">Cena</option>
-          <option value="pojemnosc">Pojemność</option>
-        </Select>
+        <SmallContainer>
+          <SelectTitle>Sortuj po:</SelectTitle>
+          <Select
+            value={sortBy}
+            onChange={(e: { target: { value: string } }) =>
+              onSortByChange(e.target.value)
+            }
+          >
+            <option value="wszystkie">Popularność</option>
+            <option value="cena">Cena</option>
+            <option value="pojemnosc">Pojemność</option>
+          </Select>
+        </SmallContainer>
 
-        <Select
-          value={functionFilter}
-          onChange={(e: { target: { value: string } }) =>
-            onFunctionFilterChange(e.target.value)
-          }
-        >
-          <option value="wszystkie">Pokaż wszystkie</option>
-          <option value="Drzwi AddWash™">Drzwi AddWash</option>
-          <option value="Panel AI Control">Panel AI Control</option>
-          <option value="Silnik inwerterowy">Silnik Inwerterowy</option>
-          <option value="Wyświetlacz elektroniczny">
-            Wyświetlacz elektroniczny
-          </option>
-        </Select>
+        <SmallContainer>
+          <SelectTitle>Funkcje:</SelectTitle>
+          <Select
+            value={functionFilter}
+            onChange={(e: { target: { value: string } }) =>
+              onFunctionFilterChange(e.target.value)
+            }
+          >
+            <option value="wszystkie">Pokaż wszystkie</option>
+            <option value="Drzwi AddWash™">Drzwi AddWash</option>
+            <option value="Panel AI Control">Panel AI Control</option>
+            <option value="Silnik inwerterowy">Silnik Inwerterowy</option>
+            <option value="Wyświetlacz elektroniczny">
+              Wyświetlacz elektroniczny
+            </option>
+          </Select>
+        </SmallContainer>
 
-        <Select
-          value={energyClass}
-          onChange={(e: { target: { value: string } }) =>
-            onEnergyClassChange(e.target.value)
-          }
-        >
-          <option value="wszystkie">Pokaż wszystkie</option>
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="D">D</option>
-        </Select>
+        <SmallContainer>
+          <SelectTitle>Klasa energetyczna:</SelectTitle>
+          <Select
+            value={energyClass}
+            onChange={(e: { target: { value: string } }) =>
+              onEnergyClassChange(e.target.value)
+            }
+          >
+            <option value="wszystkie">Pokaż wszystkie</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="D">D</option>
+          </Select>
+        </SmallContainer>
 
-        <Select
-          value={capacityFilter}
-          onChange={(e: { target: { value: string } }) =>
-            onCapacityFilterChange(e.target.value)
-          }
-        >
-          <option value="wszystkie">Pokaż wszystkie</option>
-          <option value="9">9kg</option>
-          <option value="8">8kg</option>
-          <option value="10,5">10,5kg</option>
-        </Select>
+        <SmallContainer>
+          <SelectTitle>Pojemność:</SelectTitle>
+          <Select
+            value={capacityFilter}
+            onChange={(e: { target: { value: string } }) =>
+              onCapacityFilterChange(e.target.value)
+            }
+          >
+            <option value="wszystkie">Pokaż wszystkie</option>
+            <option value="9">9kg</option>
+            <option value="8">8kg</option>
+            <option value="10,5">10,5kg</option>
+          </Select>
+        </SmallContainer>
       </FiltersContainer>
     </Container>
   );
