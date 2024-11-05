@@ -1,5 +1,6 @@
 {
   "name": "cheil-task",
+  "homepage": "https://mateusz-95.github.io/cheil-task/"
   "version": "0.1.0",
   "private": true,
   "dependencies": {
