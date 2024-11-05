@@ -1,3 +1,8 @@
+# Cheil Junior Frontend Developer Task
+Hi Michael
+Here you can see how it looks: 
+https://mateusz-95.github.io/cheil-task/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
